@@ -1,0 +1,217 @@
+<!--pages/training-catalog/training-catalog.wxml-->
+<view style="padding: 20rpx; background: #f5f5f5; min-height: 100vh;">
+  <view style="text-align: center; margin-bottom: 40rpx;">
+    <view style="font-size: 40rpx; font-weight: bold; color: #333; margin-bottom: 10rpx;">口语训练目录</view>
+    <view style="font-size: 24rpx; color: #666;">选择你感兴趣的话题开始练习</view>
+  </view>
+  
+  <!-- 基础对话练习 -->
+  <view style="background: white; padding: 30rpx; margin-bottom: 20rpx; border-radius: 12rpx;">
+    <view style="font-size: 32rpx; font-weight: bold; color: #333; margin-bottom: 10rpx;">💬 基础对话练习</view>
+    <view style="font-size: 24rpx; color: #666; margin-bottom: 20rpx;">轻松入门，快速提升对话能力</view>
+    
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="1">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">开启你的对话</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">从随机话题到专业领域，让对话更精彩</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：简单</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">15分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="4">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">有趣问题集</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">轻松有趣的问题，让对话充满欢笑</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：简单</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">15分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="10">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">选择游戏</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">简单有趣的选择题，快速了解偏好</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：简单</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">10分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="16">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">幽默问题</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">让人捧腹大笑的有趣问题</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：简单</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">15分钟</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 深度对话练习 -->
+  <view style="background: white; padding: 30rpx; margin-bottom: 20rpx; border-radius: 12rpx;">
+    <view style="font-size: 32rpx; font-weight: bold; color: #333; margin-bottom: 10rpx;">🧠 深度对话练习</view>
+    <view style="font-size: 24rpx; color: #666; margin-bottom: 20rpx;">探讨人生、哲学、社会的深刻问题</view>
+    
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="3">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">深度对话话题</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">探讨人生、哲学、社会的深刻问题</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：困难</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">30分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="7">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">哲学思考</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">探讨人性、宇宙、道德的哲学问题</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：困难</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">35分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="6">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">21问游戏</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">经典游戏，通过问题深入了解彼此</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：中等</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">20分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="9">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">了解他人</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">从浅入深，逐步了解一个人的内心世界</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：中等</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">25分钟</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 情侣对话练习 -->
+  <view style="background: white; padding: 30rpx; margin-bottom: 20rpx; border-radius: 12rpx;">
+    <view style="font-size: 32rpx; font-weight: bold; color: #333; margin-bottom: 10rpx;">💕 情侣对话练习</view>
+    <view style="font-size: 24rpx; color: #666; margin-bottom: 20rpx;">专为情侣设计的深度对话问题</view>
+    
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="5">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">情侣对话启动器</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">专为情侣设计的深度对话问题</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：中等</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">25分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="12">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">问男朋友的问题</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">深入了解男朋友的内心世界</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：中等</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">25分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="13">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">问女朋友的问题</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">深入了解女朋友的想法和感受</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：中等</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">25分钟</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 约会对话练习 -->
+  <view style="background: white; padding: 30rpx; margin-bottom: 20rpx; border-radius: 12rpx;">
+    <view style="font-size: 32rpx; font-weight: bold; color: #333; margin-bottom: 10rpx;">💝 约会对话练习</view>
+    <view style="font-size: 24rpx; color: #666; margin-bottom: 20rpx;">约会和社交场合的完美对话启动器</view>
+    
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="8">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">约会对话</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">第一次约会的完美对话启动器</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：中等</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">20分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="14">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">暗恋对象问题</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">与暗恋对象展开有趣对话的问题</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：中等</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">20分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="15">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">网络约会对话</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">Tinder、Bumble等约会应用的对话启动器</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：简单</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">15分钟</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 性别特定对话练习 -->
+  <view style="background: white; padding: 30rpx; margin-bottom: 20rpx; border-radius: 12rpx;">
+    <view style="font-size: 32rpx; font-weight: bold; color: #333; margin-bottom: 10rpx;">👫 性别特定对话练习</view>
+    <view style="font-size: 24rpx; color: #666; margin-bottom: 20rpx;">针对不同性别的专门对话问题</view>
+    
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="2">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">问男生的问题</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">精选问题，深入了解对方</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：中等</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">20分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="11">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">问女生的问题</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">专为女生设计的深度对话问题</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：中等</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">20分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="17">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">深度问题问女生</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">与女生进行深度对话的问题</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：困难</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">30分钟</text>
+      </view>
+    </view>
+
+    <view style="background: #f8f9fa; padding: 20rpx; border-radius: 10rpx; margin-bottom: 16rpx;" 
+          bindtap="goToArticle" data-id="18">
+      <view style="font-size: 28rpx; font-weight: bold; color: #333; margin-bottom: 6rpx;">有趣问题问男生</view>
+      <view style="font-size: 24rpx; color: #666; margin-bottom: 12rpx;">与男生进行有趣对话的问题</view>
+      <view style="display: flex; gap: 16rpx;">
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">难度：中等</text>
+        <text style="font-size: 22rpx; color: #999; background: white; padding: 6rpx 12rpx; border-radius: 16rpx;">20分钟</text>
+      </view>
+    </view>
+  </view>
+</view>

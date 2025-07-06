@@ -1,0 +1,52 @@
+<!--pages/my-training/my-training.wxml-->
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="page-header">
+    <view class="page-title">我的训练</view>
+    <view class="page-subtitle">管理您的训练记录</view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <button class="action-btn primary-btn" bindtap="goToTrainingCatalog">
+      训练目录
+    </button>
+    <button class="action-btn secondary-btn" bindtap="clearAllTraining">
+      清空记录
+    </button>
+  </view>
+
+  <!-- 训练列表 -->
+  <view class="training-list" wx:if="{{trainingList.length > 0}}">
+    <view class="list-header">
+      <text class="list-title">训练记录</text>
+      <text class="list-count">共 {{trainingList.length}} 条</text>
+    </view>
+    
+    <view class="training-item" wx:for="{{trainingList}}" wx:key="index">
+      <view class="training-content">
+        <view class="training-title">{{item.articleTitle}}</view>
+        <view class="training-subtitle">{{item.articleSubtitle}}</view>
+        <view class="training-meta">
+          <text class="training-time">{{item.createTime}}</text>
+          <text class="training-count">问题数量：{{item.questionCount}}</text>
+        </view>
+      </view>
+      <view class="training-actions">
+        <button class="delete-btn" bindtap="deleteTraining" data-index="{{index}}">
+          删除
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:if="{{trainingList.length === 0}}">
+    <view class="empty-icon">📚</view>
+    <view class="empty-title">暂无训练记录</view>
+    <view class="empty-subtitle">去训练目录选择练习内容吧</view>
+    <button class="empty-btn" bindtap="goToTrainingCatalog">
+      开始训练
+    </button>
+  </view>
+</view>

@@ -1,0 +1,108 @@
+<!--pages/article-detail/article-detail.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-container">
+    <input 
+      class="search-input" 
+      placeholder="搜索文章内容..." 
+      value="{{searchKeyword}}"
+      bindinput="onSearchInput"
+      bindconfirm="onSearchConfirm"
+    />
+  </view>
+
+  <!-- 搜索结果 -->
+  <view class="search-results" wx:if="{{searchResults.length > 0}}">
+    <view class="search-header">
+      <text class="search-title">搜索结果</text>
+      <text class="search-close" bindtap="closeSearchResults">×</text>
+    </view>
+    <view class="search-list">
+      <view 
+        class="search-item" 
+        wx:for="{{searchResults}}" 
+        wx:key="index"
+        bindtap="goToSearchResult"
+        data-section="{{item.sectionIndex}}"
+        data-question="{{item.questionIndex}}"
+      >
+        <view class="search-item-type">{{item.type === 'title' ? '标题' : item.type === 'subtitle' ? '副标题' : item.type === 'content' ? '内容' : '问题'}}</view>
+        <view class="search-item-content">{{item.content}}</view>
+        <view class="search-item-section">来自：{{item.sectionTitle}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 文章内容 -->
+  <view class="article-content" wx:if="{{article}}">
+    <!-- 文章头部 -->
+    <view class="article-header">
+      <view class="article-title">{{article.title}}</view>
+      <view class="article-subtitle">{{article.subtitle}}</view>
+    </view>
+
+    <!-- 部分导航 -->
+    <view class="section-nav">
+      <view 
+        class="section-nav-item {{currentSection === index ? 'active' : ''}}" 
+        wx:for="{{sections}}" 
+        wx:key="index"
+        bindtap="switchSection"
+        data-index="{{index}}"
+      >
+        {{item.title}}
+      </view>
+    </view>
+
+    <!-- 当前部分内容 -->
+    <view class="section-content" wx:if="{{sections[currentSection]}}">
+      <view class="section-header">
+        <view class="section-title">{{sections[currentSection].title}}</view>
+        <view class="section-subtitle">{{sections[currentSection].subtitle}}</view>
+      </view>
+
+      <!-- 部分内容文本 -->
+      <view class="section-text">
+        <view class="text-item" wx:for="{{sections[currentSection].content}}" wx:key="index">
+          {{item}}
+        </view>
+      </view>
+
+      <!-- 问题列表 -->
+      <view class="questions-section">
+        <view class="questions-title">练习问题</view>
+        <view class="questions-list">
+          <view class="question-item" wx:for="{{sections[currentSection].questions}}" wx:key="index">
+            <view class="question-text">{{item}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 开始练习按钮 -->
+      <view class="practice-section">
+        <button class="practice-btn" bindtap="startPractice">开始练习</button>
+      </view>
+    </view>
+
+    <!-- 部分切换按钮 -->
+    <view class="section-controls">
+      <button 
+        class="section-btn prev-btn" 
+        bindtap="prevSection"
+        disabled="{{currentSection === 0}}"
+      >
+        上一部分
+      </button>
+      <view class="section-indicator">
+        {{currentSection + 1}} / {{sections.length}}
+      </view>
+      <button 
+        class="section-btn next-btn" 
+        bindtap="nextSection"
+        disabled="{{currentSection === sections.length - 1}}"
+      >
+        下一部分
+      </button>
+    </view>
+  </view>
+</view> 

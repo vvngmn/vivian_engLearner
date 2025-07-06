@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/training-catalog/training-catalog",
+    "pages/my-training/my-training",
+    "pages/article-detail/article-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "我的口语练习",
+    "navigationBarTextStyle": "black"
+  },
+  "renderer": "webview",
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

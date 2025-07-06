@@ -1,0 +1,210 @@
+/* pages/my-training/my-training.wxss */
+.container {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* 页面头部 */
+.page-header {
+  background-color: #fff;
+  padding: 40rpx 30rpx;
+  border-radius: 15rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.page-subtitle {
+  font-size: 26rpx;
+  color: #666;
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.action-btn {
+  flex: 1;
+  height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #007aff, #0056cc);
+  color: #fff;
+  box-shadow: 0 4rpx 12rpx rgba(0, 122, 255, 0.3);
+}
+
+.primary-btn:active {
+  transform: translateY(2rpx);
+  box-shadow: 0 2rpx 6rpx rgba(0, 122, 255, 0.3);
+}
+
+.secondary-btn {
+  background-color: #f8f8f8;
+  color: #333;
+  border: 2rpx solid #e8e8e8;
+}
+
+.secondary-btn:active {
+  background-color: #e8e8e8;
+}
+
+/* 训练列表 */
+.training-list {
+  background-color: #fff;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.list-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.list-count {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.training-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+  transition: background-color 0.3s;
+}
+
+.training-item:last-child {
+  border-bottom: none;
+}
+
+.training-item:active {
+  background-color: #f8f8f8;
+}
+
+.training-content {
+  flex: 1;
+  margin-right: 20rpx;
+}
+
+.training-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+  line-height: 1.4;
+}
+
+.training-subtitle {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 15rpx;
+  line-height: 1.4;
+}
+
+.training-meta {
+  display: flex;
+  gap: 20rpx;
+}
+
+.training-time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.training-count {
+  font-size: 24rpx;
+  color: #007aff;
+  font-weight: 500;
+}
+
+.training-actions {
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn {
+  padding: 15rpx 25rpx;
+  background-color: #ff4757;
+  color: #fff;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  border: none;
+  transition: all 0.3s;
+}
+
+.delete-btn:active {
+  background-color: #e63946;
+  transform: scale(0.95);
+}
+
+/* 空状态 */
+.empty-state {
+  background-color: #fff;
+  border-radius: 15rpx;
+  padding: 80rpx 40rpx;
+  text-align: center;
+  margin-top: 100rpx;
+}
+
+.empty-icon {
+  font-size: 80rpx;
+  margin-bottom: 30rpx;
+}
+
+.empty-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15rpx;
+}
+
+.empty-subtitle {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 40rpx;
+  line-height: 1.5;
+}
+
+.empty-btn {
+  width: 200rpx;
+  height: 70rpx;
+  background: linear-gradient(135deg, #007aff, #0056cc);
+  color: #fff;
+  border-radius: 35rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 4rpx 12rpx rgba(0, 122, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.empty-btn:active {
+  transform: translateY(2rpx);
+  box-shadow: 0 2rpx 6rpx rgba(0, 122, 255, 0.3);
+}
